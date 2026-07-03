@@ -2,10 +2,8 @@ package com.divya.systemdesign.creational.singleton;
 
 /*
  * Version 2
- *
  * Goal:
  * Prevent other classes from creating objects directly.
- *
  * Solution:
  * Make the constructor private.
  */
@@ -15,12 +13,10 @@ public class ConfigurationManager {
 
     /*
      * Static variable
-     *
      * Why static?
-     *
      * Because this object belongs to the CLASS,
      * not to individual objects.
-     *
+
      * Since we want only ONE ConfigurationManager,
      * we store it as a static variable.
      */
@@ -33,9 +29,8 @@ public class ConfigurationManager {
 
     /*
      * Private Constructor
-     *
      * Only this class can call this constructor.
-     *
+
      * Any attempt to create an object from another class
      * using 'new ConfigurationManager()'
      * will result in a compilation error.
@@ -52,7 +47,6 @@ public class ConfigurationManager {
     }
     /*
      * Public method to access the single object.
-     *
      * Nobody creates the object.
      * Everyone receives the same object.
      */
@@ -71,18 +65,16 @@ public class ConfigurationManager {
 
     /*
      * Observation:
-     *
      * Making the constructor private successfully prevents
      * other classes from creating multiple objects.
-     *
      * However, another problem arises.
-     *
+
      * Since no class can create an object anymore,
      * how will the application access ConfigurationManager?
-     *
+
      * We now need a controlled way to provide
      * the single object to everyone.
-     *
+
      * This leads us to the next step:
      * getInstance()
      */
