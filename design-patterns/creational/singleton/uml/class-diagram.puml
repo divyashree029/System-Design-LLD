@@ -1,0 +1,11 @@
+@startuml
+
+class ConfigurationManager {
+    - instance : ConfigurationManager
+    - applicationName : String
+
+    - ConfigurationManager()
+    + getInstance() : ConfigurationManager
+}
+
+@enduml

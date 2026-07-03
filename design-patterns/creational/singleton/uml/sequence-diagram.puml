@@ -1,0 +1,15 @@
+@startuml
+
+title Singleton Pattern - Sequence Diagram
+
+actor Client
+
+Client -> ConfigurationManager : getInstance()
+
+alt instance == null
+    ConfigurationManager -> ConfigurationManager : create instance
+end
+
+ConfigurationManager --> Client : return instance
+
+@enduml
