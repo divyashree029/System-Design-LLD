@@ -41,8 +41,6 @@ Services:
 - User Service
 - Order Service
 - Payment Service
-- Inventory Service
-- Notification Service
 
 All services share the same ConfigurationManager object.
 
