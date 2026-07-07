@@ -1,0 +1,17 @@
+@startuml
+
+title Factory Method Pattern - Sequence Diagram
+
+actor Client
+
+Client -> OrderService : placeOrder(EMAIL)
+
+OrderService -> NotificationFactory : createNotification(EMAIL)
+
+NotificationFactory --> OrderService : EmailNotification
+
+OrderService -> EmailNotification : send()
+
+EmailNotification --> Client : Notification Sent
+
+@enduml

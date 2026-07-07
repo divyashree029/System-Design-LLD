@@ -1,0 +1,28 @@
+@startuml
+
+title Factory Method Pattern - Class Diagram
+
+interface Notification {
+    + send()
+}
+
+class EmailNotification
+class SMSNotification
+class PushNotification
+
+Notification <|.. EmailNotification
+Notification <|.. SMSNotification
+Notification <|.. PushNotification
+
+class NotificationFactory {
+    + createNotification(type) : Notification
+}
+
+class OrderService {
+    + placeOrder(type)
+}
+
+OrderService --> NotificationFactory
+NotificationFactory --> Notification
+
+@enduml

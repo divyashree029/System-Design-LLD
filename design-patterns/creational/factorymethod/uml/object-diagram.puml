@@ -1,0 +1,19 @@
+@startuml
+
+title Factory Method Pattern - Object Diagram
+
+object Client
+
+object OrderService
+
+object NotificationFactory
+
+object EmailNotification
+
+Client --> OrderService
+
+OrderService --> NotificationFactory
+
+NotificationFactory --> EmailNotification
+
+@enduml
