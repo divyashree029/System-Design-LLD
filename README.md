@@ -46,8 +46,8 @@ java-system-design
 | Pattern | Status |
 |----------|--------|
 | Singleton | ✅ Completed |
-| Factory Method | ⏳ Coming Next |
-| Abstract Factory | ⏳ Planned |
+| Factory Method | ✅ Completed |
+| Abstract Factory | ⏳ Coming Next |
 | Builder | ⏳ Planned |
 | Prototype | ⏳ Planned |
 
@@ -108,10 +108,10 @@ java-system-design
 ```
 Overall Progress
 
-█████░░░░░░░░░░░░░░░░░ 5%
+██████░░░░░░░░░░░░░░░░ 10%
 
 ✔ Singleton
-⬜ Factory Method
+✔ Factory Method
 ⬜ Abstract Factory
 ⬜ Builder
 ⬜ Prototype
