@@ -1,4 +1,4 @@
-package com.divya.systemdesign.creational.singleton;
+package com.divya.systemdesign.creational.singleton_ConfigurationManager;
 
 /*
  * Version 2

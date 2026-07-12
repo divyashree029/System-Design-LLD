@@ -1,0 +1,78 @@
+@startuml
+
+title Abstract Factory Pattern - Class Diagram
+
+interface Button {
+    +render()
+}
+
+interface Checkbox {
+    +render()
+}
+
+interface TextField {
+    +render()
+}
+
+class WindowsButton
+class MacButton
+class LinuxButton
+
+class WindowsCheckbox
+class MacCheckbox
+class LinuxCheckbox
+
+class WindowsTextField
+class MacTextField
+class LinuxTextField
+
+Button <|.. WindowsButton
+Button <|.. MacButton
+Button <|.. LinuxButton
+
+Checkbox <|.. WindowsCheckbox
+Checkbox <|.. MacCheckbox
+Checkbox <|.. LinuxCheckbox
+
+TextField <|.. WindowsTextField
+TextField <|.. MacTextField
+TextField <|.. LinuxTextField
+
+interface GUIFactory{
+
++createButton()
+
++createCheckbox()
+
++createTextField()
+
+}
+
+class WindowsFactory
+class MacFactory
+class LinuxFactory
+
+GUIFactory <|.. WindowsFactory
+GUIFactory <|.. MacFactory
+GUIFactory <|.. LinuxFactory
+
+WindowsFactory --> WindowsButton
+WindowsFactory --> WindowsCheckbox
+WindowsFactory --> WindowsTextField
+
+MacFactory --> MacButton
+MacFactory --> MacCheckbox
+MacFactory --> MacTextField
+
+LinuxFactory --> LinuxButton
+LinuxFactory --> LinuxCheckbox
+LinuxFactory --> LinuxTextField
+
+class Application
+
+Application --> GUIFactory
+Application --> Button
+Application --> Checkbox
+Application --> TextField
+
+@enduml

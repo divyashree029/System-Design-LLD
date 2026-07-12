@@ -1,0 +1,20 @@
+@startuml
+
+title Abstract Factory Pattern - Object Diagram
+
+object app
+
+object windowsFactory
+
+object windowsButton
+
+object windowsCheckbox
+
+object windowsTextField
+
+app --> windowsFactory
+app --> windowsButton
+app --> windowsCheckbox
+app --> windowsTextField
+
+@enduml

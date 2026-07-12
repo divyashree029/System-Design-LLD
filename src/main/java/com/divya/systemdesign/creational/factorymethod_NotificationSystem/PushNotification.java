@@ -1,4 +1,4 @@
-package com.divya.systemdesign.creational.factorymethod;
+package com.divya.systemdesign.creational.factorymethod_NotificationSystem;
 
 public class PushNotification implements Notification{
     @Override

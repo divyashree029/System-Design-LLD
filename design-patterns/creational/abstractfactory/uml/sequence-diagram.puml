@@ -1,0 +1,31 @@
+@startuml
+
+title Abstract Factory Pattern - Sequence Diagram
+
+actor Client
+
+Client -> Demo : Start Application
+
+Demo -> WindowsFactory : create()
+
+Demo -> Application : new Application(factory)
+
+Application -> WindowsFactory : createButton()
+
+WindowsFactory --> Application : WindowsButton
+
+Application -> WindowsFactory : createCheckbox()
+
+WindowsFactory --> Application : WindowsCheckbox
+
+Application -> WindowsFactory : createTextField()
+
+WindowsFactory --> Application : WindowsTextField
+
+Application -> Button : render()
+
+Application -> Checkbox : render()
+
+Application -> TextField : render()
+
+@enduml
